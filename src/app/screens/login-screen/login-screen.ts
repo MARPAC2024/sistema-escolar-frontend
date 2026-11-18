@@ -19,28 +19,22 @@ export class LoginScreen implements OnInit {
   public password: string = '';
   public load: boolean = false;
   public errors: any = {};
-  public typeInput: string = "password";
 
-  constructor() { }
+  // Tipo de campo para la contraseña
+  public typeInput: 'password' | 'text' = 'password';
 
-  ngOnInit(): void {
+  constructor() {}
 
+  ngOnInit(): void {}
+
+  public login() {}
+
+  // Función para mostrar y ocultar la contraseña
+  showPassword(): void {
+    this.typeInput = this.typeInput === 'password' ? 'text' : 'password';
   }
 
-  public login() {
+  public registrar() {}
 
-  }
-
-  public showPassword() {
-
-  }
-
-  public registrar(){
-
-  }
-
-  public olvideContrasena(){
-
-  }
-
+  public olvideContrasena() {}
 }
