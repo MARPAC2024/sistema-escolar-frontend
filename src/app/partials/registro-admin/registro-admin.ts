@@ -105,7 +105,6 @@ export class RegistroAdmin implements OnInit {
         this.notificationService.error('Error al registrar el administrador');
       }
     )
-
   }
 
   public actualizar(){
