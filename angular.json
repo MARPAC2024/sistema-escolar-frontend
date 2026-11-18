@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-escolar-frontend": {
+    "sistema-escolar-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,10 +72,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "app-escolar-frontend:build:production"
+              "buildTarget": "sistema-escolar-frontend:build:production"
             },
             "development": {
-              "buildTarget": "app-escolar-frontend:build:development"
+              "buildTarget": "sistema-escolar-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
