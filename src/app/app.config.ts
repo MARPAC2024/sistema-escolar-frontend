@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
 
-    // Esta es la nueva forma de injectar el mask para que no le de errores
+    // Esta es la nueva forma de injectar el mask para que no de errores
     // al momento de crear los formularios
     provideNgxMask(),
   ]
