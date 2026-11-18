@@ -92,6 +92,8 @@ export class RegistroAdmin implements OnInit {
     }
 
     //Lógica para registrar o actualizar los datos del administrador
+    // TODO: Aquí se debe implementar la lógica para registrar o actualizar los datos del administrador en el backend, 
+    //       utilizando el servicio de administradores.
     this.administradoresService.registrarAdmin(this.admin).subscribe(
       (response) => {
         //Dentro del response se puede obtener el mensaje de éxito o error del backend, así como los datos del administrador registrado
