@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatIconModule} from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
+import { SHARED_IMPORTS } from '../../shared/shared.imports';
 
 @Component({
   selector: 'app-login-screen',
   imports: [
-    MatButtonModule,
-    MatDividerModule,
-    MatIconModule
+    ...SHARED_IMPORTS
   ],
   templateUrl: './login-screen.html',
   styleUrl: './login-screen.scss',
+
 })
 export class LoginScreen {
 
