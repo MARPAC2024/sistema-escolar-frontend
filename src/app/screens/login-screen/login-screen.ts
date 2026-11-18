@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SHARED_IMPORTS } from '../../shared/shared.imports';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-login-screen',
@@ -11,6 +12,35 @@ import { SHARED_IMPORTS } from '../../shared/shared.imports';
   styleUrl: './login-screen.scss',
 
 })
-export class LoginScreen {
+export class LoginScreen implements OnInit {
+
+  //Se definen las variables globales que se utilizarán en el componente
+  public username: string = '';
+  public password: string = '';
+  public load: boolean = false;
+  public errors: any = {};
+  public typeInput: string = "password";
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
+  public login() {
+
+  }
+
+  public showPassword() {
+
+  }
+
+  public registrar(){
+
+  }
+
+  public olvideContrasena(){
+
+  }
 
 }
