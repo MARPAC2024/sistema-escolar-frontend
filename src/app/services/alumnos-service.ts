@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { ValidatorService } from './tools/validator-service';
 import { ErrorsService } from './tools/errors-service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +11,7 @@ import { ErrorsService } from './tools/errors-service';
 export class AlumnosService {
 
   constructor(
+    private http: HttpClient,
     private validatorService: ValidatorService,
     private errorService: ErrorsService
   ) { }
@@ -105,4 +109,10 @@ export class AlumnosService {
 
     return error;
   }
+
+  public registrarAlumno(data: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<any>(`${environment.url_api}/alumnos/`, data, { headers });
+  }
+
 }

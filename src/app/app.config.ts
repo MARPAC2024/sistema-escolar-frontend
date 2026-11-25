@@ -10,6 +10,9 @@ import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 //Agregamos el masking para los inputs de los formularios
 import { provideNgxMask } from 'ngx-mask';
 
+// Adaptador nativo para el funcionamiento de MatDatepicker
+import { provideNativeDateAdapter } from '@angular/material/core';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -21,5 +24,6 @@ export const appConfig: ApplicationConfig = {
     // Esta es la nueva forma de injectar el mask para que no de errores
     // al momento de crear los formularios
     provideNgxMask(),
+    provideNativeDateAdapter(),
   ]
 };
