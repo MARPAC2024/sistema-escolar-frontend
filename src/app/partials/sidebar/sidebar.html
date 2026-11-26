@@ -1,0 +1,72 @@
+@if (isMobileView) {
+  <div
+    class="sidebar-overlay"
+    [ngClass]="{ 'mobile-open': mobileOpen }"
+    (click)="closeSidebar()"
+    aria-hidden="true"
+  ></div>
+}
+
+<aside class="sidebar" [ngClass]="{ 'mobile-open': mobileOpen }">
+  <nav aria-label="Navegación principal">
+    <ul class="sidebar-list">
+      <li [hidden]="!canSeeHomeItem()">
+        <a routerLink="/home" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>home</mat-icon>
+          <span>Inicio</span>
+        </a>
+      </li>
+
+      <li [hidden]="!canSeeRegisterItem()">
+        <a routerLink="/registro-usuarios" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>person_add</mat-icon>
+          <span>Registro</span>
+        </a>
+      </li>
+
+      <li [hidden]="!canSeeAdminItems()">
+        <a routerLink="/administrador" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>admin_panel_settings</mat-icon>
+          <span>Admins</span>
+        </a>
+      </li>
+
+      <li [hidden]="!canSeeTeacherItems()">
+        <a routerLink="/maestros" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>people</mat-icon>
+          <span>Maestros</span>
+        </a>
+      </li>
+      <li [hidden]="!canSeeTeacherItems()">
+        <a routerLink="/materias" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>library_books</mat-icon>
+          <span>Materias</span>
+        </a>
+      </li>
+      <li [hidden]="!canSeeTeacherItems()">
+        <a routerLink="/eventos-academicos" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>event</mat-icon>
+          <span>Eventos Académicos</span>
+        </a>
+      </li>
+
+      <li [hidden]="!canSeeStudentItems()">
+        <a routerLink="/alumnos" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>school</mat-icon>
+          <span>Alumnos</span>
+        </a>
+      </li>
+      <li [hidden]="!canSeeStudentItems()">
+        <a routerLink="/graficas" routerLinkActive="active" (click)="closeSidebar()">
+          <mat-icon>bar_chart</mat-icon>
+          <span>Gráficas</span>
+        </a>
+      </li>
+    </ul>
+
+    <button type="button" class="logout-btn" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Cerrar sesión</span>
+    </button>
+  </nav>
+</aside>
