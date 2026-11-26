@@ -43,7 +43,6 @@ export class RegistroAdmin implements OnInit {
   ngOnInit(): void {
     //Si el rol es administrador, se inicializa el objeto admin con los datos del usuario
     this.admin = this.administradoresService.esquemaAdmin();
-    this.admin.rol = this.rol || 'administrador';
     console.log('Datos del administrador:', this.admin);
   }
 
